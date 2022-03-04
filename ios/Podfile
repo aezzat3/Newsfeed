@@ -14,6 +14,8 @@ target 'newsFeed' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-restart', :path => '../node_modules/react-native-restart'
+
   target 'newsFeedTests' do
     inherit! :complete
     # Pods for testing

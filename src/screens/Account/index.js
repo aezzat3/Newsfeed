@@ -1,12 +1,6 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {LanguageTemp} from '../../components';
 
-const Account = () => {
-  return (
-    <View>
-      <Text>Account</Text>
-    </View>
-  );
-};
+const Account = () => <LanguageTemp />;
 
 export default Account;
