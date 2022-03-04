@@ -1,12 +1,6 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {NewsList} from '../../components';
 
-const Home = () => {
-  return (
-    <View>
-      <Text>Home</Text>
-    </View>
-  );
-};
+const Home = () => <NewsList />;
 
 export default Home;
