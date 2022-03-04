@@ -17,19 +17,7 @@ const HomeHeader = () => {
   return (
     <View style={[styles.container, extraHeightStyle]}>
       <View style={styles.headerContentContainer}>
-        <PressedIcon
-          name={ICONS.notifications}
-          size={calcWidth(20)}
-          color={COLORS.dark}
-          onPress={() => Alert.alert('NOTIFICATIONS')}
-        />
         <AppText style={styles.headerText}>{'NEWS FEED'}</AppText>
-        <PressedIcon
-          name={'search'}
-          size={calcWidth(20)}
-          color={COLORS.dark}
-          onPress={() => navigation.navigate('Search')}
-        />
       </View>
     </View>
   );

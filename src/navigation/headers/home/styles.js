@@ -12,7 +12,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: calcHeight(18),
+    alignSelf: 'center',
+    marginBottom: calcHeight(14),
   },
   headerText: {
     color: COLORS.main,

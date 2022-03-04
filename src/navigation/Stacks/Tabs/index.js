@@ -37,7 +37,7 @@ const AccountStack = () => (
     <AccountNav.Screen
       component={Account}
       name={'account'}
-      options={{headerShown: false}}
+      options={{header: () => <HomeHeader />}}
     />
   </AccountNav.Navigator>
 );
