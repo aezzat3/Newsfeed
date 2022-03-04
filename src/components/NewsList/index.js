@@ -3,7 +3,7 @@ import styles from './styles';
 import News from '../../dummy/News.json';
 import {isEmpty} from 'lodash';
 import {findItem} from '../../utils';
-import {FlatList} from 'react-native';
+import {FlatList, Linking} from 'react-native';
 import {NewsCard} from '../NewsCard';
 import {SearchBox} from '../SearchBox';
 
@@ -33,11 +33,9 @@ let NewsList = () => {
     );
   };
 
-  const onPressItem = () => {
-    // navigateToScreen({
-    //   name: 'OrganizationDetails',
-    //   params: {organizationInfo: item},
-    // });
+  const onPressItem = item => {
+    const {url} = item;
+    Linking.openURL(url);
   };
 
   const onRefresh = () => {
@@ -53,7 +51,7 @@ let NewsList = () => {
       data={_news}
       keyExtractor={i => i.id + ''}
       renderItem={({item, index}) => (
-        <NewsCard news={item} onPress={onPressItem(item)} />
+        <NewsCard news={item} onPress={() => onPressItem(item)} />
       )}
       showsVerticalScrollIndicator={false}
       contentContainerStyle={styles.contentContainer}
